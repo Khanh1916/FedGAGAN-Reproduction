@@ -367,5 +367,4 @@ remain governed by their respective licenses.
 ```
 
 A machine-readable citation file is provided as [`CITATION.cff`](CITATION.cff)
-(replace `USERNAME` in `repository-code` with your GitHub username after
-publishing the repository).
+
