@@ -1,0 +1,7 @@
+data:
+  name: MQTT-IoT-IDS2020
+  paths: [data/raw/MQTT-IoT-IDS2020/*.csv]
+  label_column: label
+  attack_values: [attack, 1]
+  drop_columns: []
+

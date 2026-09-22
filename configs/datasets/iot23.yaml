@@ -1,0 +1,7 @@
+data:
+  name: IoT-23
+  paths: [data/raw/IoT-23/*.csv]
+  label_column: label
+  attack_values: [malicious, attack, 1]
+  drop_columns: []
+

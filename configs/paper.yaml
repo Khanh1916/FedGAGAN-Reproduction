@@ -1,0 +1,61 @@
+# Paper-aligned profile. Full GA settings are computationally expensive.
+seed: 42
+output_dir: artifacts/paper_run
+
+data:
+  name: UNSW-NB15
+  paths: [data/raw/UNSW-NB15/*.csv]
+  label_column: label
+  attack_values: [1]
+  drop_columns: [id, attack_cat]
+  max_rows: null
+  test_size: 0.20
+  validation_size: 0.10
+
+model:
+  latent_dim: 32
+  generator_hidden: [128, 512, 512, 128]
+  critic_hidden: [128, 512, 512, 128]
+  critic_dropout: 0.20
+  output_activation: sigmoid
+
+train:
+  learning_rate: 0.0001
+  beta_1: 0.5
+  beta_2: 0.9
+  batch_size: 64
+  epochs: 10000
+  steps_per_epoch: null
+  n_critic: 5
+  gradient_penalty_weight: 10.0
+
+federated:
+  num_clients: 5
+  client_fraction: 1.0
+  rounds: 10
+  # null makes the selected GA/train epochs apply at each client.
+  local_epochs: null
+  partition: iid
+  dirichlet_alpha: 0.5
+
+ga:
+  enabled: true
+  population_size: 250
+  generations: 20
+  crossover_probability: 0.6
+  mutation_probability: 0.1
+  evaluation_steps: 300
+  elite_count: 1
+  search_space:
+    learning_rate: [0.00001, 0.001]
+    batch_size: [32, 64, 128, 256, 512]
+    epochs: [1000, 50000]
+    beta_1: [0.5, 0.9]
+    beta_2: [0.9, 0.999]
+    n_critic: [1, 10]
+    gradient_penalty_weight: [1.0, 20.0]
+
+evaluation:
+  synthetic_samples: 15000
+  histogram_bins: 20
+  classifier_random_state: 42

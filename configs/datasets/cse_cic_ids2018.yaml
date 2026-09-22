@@ -1,0 +1,19 @@
+data:
+  name: CSE-CIC-IDS2018
+  paths: [data/raw/CSE-CIC-IDS2018/*.csv]
+  label_column: Label
+  attack_values:
+    - Bot
+    - Brute Force -Web
+    - Brute Force -XSS
+    - DDoS attacks-LOIC-HTTP
+    - DoS attacks-GoldenEye
+    - DoS attacks-Hulk
+    - DoS attacks-SlowHTTPTest
+    - DoS attacks-Slowloris
+    - FTP-BruteForce
+    - Infilteration
+    - SQL Injection
+    - SSH-Bruteforce
+  drop_columns: []
+

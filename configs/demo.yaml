@@ -1,0 +1,60 @@
+seed: 42
+output_dir: artifacts/demo
+
+data:
+  name: demo
+  paths: [data/raw/demo.csv]
+  label_column: label
+  attack_values: [1]
+  drop_columns: []
+  max_rows: null
+  test_size: 0.20
+  validation_size: 0.10
+
+model:
+  latent_dim: 32
+  generator_hidden: [64, 128, 64]
+  critic_hidden: [64, 128, 64]
+  critic_dropout: 0.20
+  output_activation: sigmoid
+
+train:
+  learning_rate: 0.0001
+  beta_1: 0.5
+  beta_2: 0.9
+  batch_size: 32
+  epochs: 1
+  steps_per_epoch: 2
+  n_critic: 2
+  gradient_penalty_weight: 10.0
+
+federated:
+  num_clients: 3
+  client_fraction: 1.0
+  rounds: 2
+  local_epochs: 1
+  partition: iid
+  dirichlet_alpha: 0.5
+
+ga:
+  enabled: false
+  population_size: 4
+  generations: 2
+  crossover_probability: 0.6
+  mutation_probability: 0.1
+  evaluation_steps: 2
+  elite_count: 1
+  search_space:
+    learning_rate: [0.00001, 0.001]
+    batch_size: [16, 32, 64]
+    epochs: [1, 3]
+    beta_1: [0.5, 0.9]
+    beta_2: [0.9, 0.999]
+    n_critic: [1, 3]
+    gradient_penalty_weight: [5.0, 15.0]
+
+evaluation:
+  synthetic_samples: 200
+  histogram_bins: 15
+  classifier_random_state: 42
+

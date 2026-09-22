@@ -1,0 +1,7 @@
+data:
+  name: UNSW-NB15
+  paths: [data/raw/UNSW-NB15/*.csv]
+  label_column: label
+  attack_values: [1]
+  drop_columns: [id, attack_cat]
+
