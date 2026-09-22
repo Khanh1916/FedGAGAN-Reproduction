@@ -1,10 +1,14 @@
 # FedGAGAN Reproduction
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+[![Python 3.10+](https://img.shields.io/badge/python-3.10%2B-blue.svg)](https://www.python.org/downloads/)
+[![DOI](https://img.shields.io/badge/DOI-10.1109%2FACCESS.2025.3547255-blue)](https://doi.org/10.1109/ACCESS.2025.3547255)
+
 Implementation of the workflow described in:
 
 > W. Bouzeraib et al., "Enhancing IoT Intrusion Detection Systems Through
 > Horizontal Federated Learning and Optimized WGAN-GP," IEEE Access, 2025,
-> DOI: 10.1109/ACCESS.2025.3547255.
+> [DOI: 10.1109/ACCESS.2025.3547255](https://doi.org/10.1109/ACCESS.2025.3547255).
 
 The paper does not publish source code and leaves several implementation details
 unspecified. This repository therefore separates **paper-stated settings** from
@@ -347,5 +351,21 @@ Colab disconnections, and evaluation problems, see `TROUBLESHOOTING.md`.
 ## License and citation
 
 The reproduction code is MIT licensed. The source paper and original datasets
-remain governed by their respective licenses. Cite the IEEE Access paper when
-using the method or this reproduction.
+remain governed by their respective licenses.
+
+**Cite the original paper** when using the method or this reproduction:
+
+```bibtex
+@article{bouzeraib2025fedgagan,
+  title   = {Enhancing IoT Intrusion Detection Systems Through Horizontal
+             Federated Learning and Optimized WGAN-GP},
+  author  = {Bouzeraib, W. and others},
+  journal = {IEEE Access},
+  year    = {2025},
+  doi     = {10.1109/ACCESS.2025.3547255}
+}
+```
+
+A machine-readable citation file is provided as [`CITATION.cff`](CITATION.cff)
+(replace `USERNAME` in `repository-code` with your GitHub username after
+publishing the repository).

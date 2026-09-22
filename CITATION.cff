@@ -1,0 +1,25 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite both the original paper and this reproduction repository."
+type: software
+title: "FedGAGAN Reproduction: Horizontal Federated Learning and Optimized WGAN-GP for IoT IDS"
+version: 0.1.0
+date-released: "2026-01-01"
+license: MIT
+repository-code: "https://github.com/Khanh1916/FedGAGAN-Reproduction"
+abstract: >-
+  Independent, reproducible implementation of the workflow described in
+  Bouzeraib et al. (IEEE Access, 2025): attack-only WGAN-GP data augmentation
+  optimized by a genetic algorithm, combined with horizontal federated learning
+  for IoT intrusion detection systems. This is not the authors' original code.
+authors:
+  - name: "Reproduction project"
+preferred-citation:
+  type: article
+  authors:
+    - family-names: Bouzeraib
+      given-names: W.
+  title: "Enhancing IoT Intrusion Detection Systems Through Horizontal Federated Learning and Optimized WGAN-GP"
+  journal: "IEEE Access"
+  year: 2025
+  doi: "10.1109/ACCESS.2025.3547255"
+  url: "https://doi.org/10.1109/ACCESS.2025.3547255"
