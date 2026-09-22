@@ -115,9 +115,9 @@ The paper's printed "Federated Averaging Algorithm" appears to repeat GA steps
 instead of specifying the actual FedAvg equations. This implementation uses the
 standard sample-count-weighted average:
 
-\[
+$$
   w_{t+1} = \sum_{k \in S_t} \frac{n_k}{\sum_j n_j} w_{t+1}^{(k)}.
-\]
+$$
 
 Generator and critic tensors are aggregated separately.
 
@@ -251,15 +251,15 @@ CSV. The paper describes this feature extraction but does not provide code.
 
 For each critic update:
 
-\[
+$$
 L_D = E[D(\tilde{x})] - E[D(x)] + \lambda E[(\|\nabla_{\hat{x}}D(\hat{x})\|_2 - 1)^2].
-\]
+$$
 
 For each generator update:
 
-\[
+$$
 L_G = -E[D(G(z))].
-\]
+$$
 
 The implementation trains the critic `n_critic` times before every generator
 step and uses Adam with GA-searchable learning rate, beta 1, and beta 2.
